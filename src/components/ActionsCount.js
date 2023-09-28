@@ -1,12 +1,15 @@
 import React from 'react'
 import Card from './Card'
-const ActionsCount = ({handleCount}) => {
+import { useSelector } from 'react-redux'
+
+const ActionsCount = () => {
+    const value = useSelector(state => console.log(state.list))
     return (
         <div className="cards">
-            <Card handleCount={handleCount} counter={1}/>
-            <Card handleCount={handleCount} counter={5}/>
-            <Card handleCount={handleCount} counter={10}/>
-            <Card handleCount={handleCount} counter={20}/>
+            <Card counter={1}/>
+            <Card counter={5}/>
+            <Card counter={10}/>
+            <Card counter={20}/>
         </div>
     )
 }
